@@ -1,0 +1,76 @@
+.menu {
+    background-color: $light-grey;
+    font-family: $font-secondary;
+    padding: 1.5rem 3rem;
+    height: auto;
+}
+.inline-list {
+    padding-top: 1rem;
+    text-align: center;
+}
+.inline-list li {
+    float: none;
+    display: inline-block;
+}
+.inline-list a {
+    color: $dark-grey;
+    font-weight: bold;
+    letter-spacing: 0.125rem;
+    padding-bottom: 0.5rem;
+}
+
+.inline-list a:hover {
+    color: $emerald;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+}
+
+.account li {
+    margin-left: .2rem;
+}
+.account a {
+    border: 2px solid;
+    border-radius: .25rem;
+    color: $medium-grey;
+    font-weight: 500;
+    letter-spacing: normal;
+    margin-left: 0.5rem;
+    padding: 0.5rem 1.5rem;
+}
+.account a:hover {
+    background-color: $emerald;
+    border-color: $emerald;
+    color: #fff;
+}
+
+.logo {
+    background: url('../img/logo-tiny.png') no-repeat top left;
+    background-size: contain;
+    font: bold 2rem/1 $font-secondary;
+    margin: 0 0 1rem 0;
+    color: $dark-grey;
+    text-indent: -9999999rem;
+    overflow: hidden;
+    width: 40rem;
+    height: 3rem;
+}
+.logo b {
+    color: $scooter-blue;
+}
+
+@media only screen and (min-width: 40.063em) {
+    .menu {
+        height: 7rem;
+    }
+    .inline-list {
+        float: left;
+        margin: 0 0 0 1.5rem;
+    }
+    .account {
+      float: right;
+      margin: -.75rem 0 0 0;
+    }
+    .logo {
+        float: left;
+    }
+ }

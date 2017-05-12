@@ -1,0 +1,24 @@
+footer {
+    padding: 1.5rem 3rem;
+}
+.row {
+    max-width: 100%;
+}
+.columns {
+    padding-left: 0;
+}
+.social {
+    text-align: right;
+}
+#instagram,
+#facebook-square,
+#twitter {
+    height: 35px;
+    width: 35px;
+}
+footer p {
+    color: $medium-grey;
+    font-size: 0.95rem;
+    font-weight: 300;
+    padding-top: 0.5rem;
+}
