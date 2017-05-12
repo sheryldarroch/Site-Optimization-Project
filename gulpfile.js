@@ -1,47 +1,58 @@
 'use strict';
 
 var gulp = 	require('gulp'),
-  concat =	require('gulp-concat'),
   uglify =	require('gulp-uglify'),
   rename = 	require('gulp-rename'),
 	sass = 	require('gulp-sass'),
 	maps = 	require('gulp-sourcemaps'),
-  cleanCSS = require('gulp-clean-css');
+  cleanCSS = require('gulp-clean-css'),
+	 del = require('del'),
+  useref = require('gulp-useref'),
+  gulpIf = require('gulp-if');
 
-gulp.task("concatScripts", function() {
-	return gulp.src([
-		'js/foundation.js', 
-		'js/foundation.reveal.js', 
-		'js/scripts.js'
-		])
-	.pipe(maps.init())
-	.pipe(concat("app.js"))
-	.pipe(maps.write("./"))
-	.pipe(gulp.dest("js"));
-});
-
-gulp.task("minifyScripts", ['concatScripts'], function() {
-	return gulp.src("js/app.js")
-	.pipe(uglify())
-	.pipe(rename("app.min.js"))
-	.pipe(gulp.dest("js"));
-});
+var options = {
+	src: 'src',
+	dist: 'dist'
+};
 
 gulp.task("compileSass", function() {
-	return gulp.src("scss/application.scss")
+	return gulp.src(options.src + "/scss/application.scss")
 	.pipe(maps.init())
 	.pipe(sass())
 	.pipe(maps.write('./'))
-	.pipe(gulp.dest("css"));
+	.pipe(gulp.dest(options.src + "/css"));
 });
 
-gulp.task("minifyCss", ['compileSass'], function() {
-	return gulp.src("css/application.css")
-	.pipe(cleanCSS())
-	.pipe(rename("application.min.css"))
-	.pipe(gulp.dest("css"));
+// gulp.task("minifyCss", ['compileSass'], function() {
+	// return gulp.src("css/application.css")
+	// .pipe(cleanCSS())
+	// .pipe(rename("application.min.css"))
+	// .pipe(gulp.dest("css"));
+// });
+
+gulp.task("watchFiles", function() {
+	gulp.watch(options.src + '/scss/**/*.scss', ['compileSass'])
 });
 
-gulp.task("build", ['minifyScripts', 'minifyCss']);
+gulp.task('clean', function() {
+	del(['dist', 'css/application*.css*', 'js/app*.js*']);
+});
 
-gulp.task('default', ['build']);
+gulp.task('html', ['compileSass'], function() {
+	return gulp.src(options.src + '/index.html')
+		.pipe(useref())
+		.pipe(gulpIf('*.js', uglify()))
+		.pipe(gulpIf('*.css', cleanCSS()))
+		.pipe(gulp.dest(options.dist));
+});
+
+gulp.task("build", ['html'], function () {
+return gulp.src([options.src + '/img/**'])
+	.pipe(gulp.dest(options.dist + '/img'));
+});
+
+gulp.task('serve', ['watchFiles']);
+
+gulp.task('default', ['clean'], function() {
+	gulp.start('build');
+});
