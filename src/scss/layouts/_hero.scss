@@ -5,22 +5,24 @@
     margin-bottom: 1rem;
     padding: 1.5rem 3rem;
 }
-.hero .info {
+.info {
     float: right;
     margin-top: 47vh;
 }
-.hero .info .attribution {
+
+.attribution {
     color: $light-grey;
     font-size: 0.95rem;
     float: left;
     text-align: right;
 }
-.hero .info .attribution b {
+
+.attribution b {
     color: $dark-grey;
     display: block;
     font-weight: 500;
 }
-.hero .info .avatar {
+.avatar {
     border-radius: 50%;
     float: right;
     height: 50px;

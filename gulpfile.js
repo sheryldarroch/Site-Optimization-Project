@@ -23,13 +23,6 @@ gulp.task("compileSass", function() {
 	.pipe(gulp.dest(options.src + "/css"));
 });
 
-// gulp.task("minifyCss", ['compileSass'], function() {
-	// return gulp.src("css/application.css")
-	// .pipe(cleanCSS())
-	// .pipe(rename("application.min.css"))
-	// .pipe(gulp.dest("css"));
-// });
-
 gulp.task("watchFiles", function() {
 	gulp.watch(options.src + '/scss/**/*.scss', ['compileSass'])
 });

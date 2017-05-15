@@ -1,15 +1,60 @@
-.reveal-modal .info {
-    padding: 2rem 1rem 0;
+#modal {
+	display: none;
 }
-.reveal-modal .info .attribution {
-    color: $dark-grey;
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 999;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color:  rgba(0, 0, 0, 0.5);
+}
+
+.content {
+	position: relative;
+	background-color: #fefefe;
+	margin: auto;
+	padding: 0;
+	width: 60%;
+	max-width: 600px;
+}
+
+.close {
+	color: white;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 35px;
+	font-wieght: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #999;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.my-slides {
+	display: none;
+}
+
+.modal-info {
+	background-color: white;
+}
+
+.modal-attr {
     line-height: 75px;
 }
-.reveal-modal .info .attribution b {
+.modal-attr b {
     font-weight: 700;
 }
-.reveal-modal .info .avatar {
-    border-radius: 50%;
+.modal-avatar {
     float: left;
     height: 75px;
     margin-right: 1rem;
