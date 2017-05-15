@@ -47,19 +47,18 @@ var arr = [
 ];
 
 function createModal() {
-	var modal ='<div class="content>"';
+	var modal ='';
 	$.each(arr, function(index, item) {
 		modal += '<div class="my-slides">';
 		modal += '<h2 class="modal-title">Photo</h2>';
-		modal += '<img src="' + item.photo + '" alt="Photo">';
-		modal += '<div class="modal-info info">';
+		modal += '<img src="' + item.photo + '" alt="Photo" class="modal-img">';
+		modal += '<div class="grid-info modal-info">';
 		modal += '<img src="' + item.avatar + '" alt="Photo"  class="avatar modal-avatar">';
 		modal += '<span class="attribution modal-attr">Photo by <b>Werner Bechtelar</b></span>';
 		modal += '</div>';
 		modal += '</div>';
 	});
-	modal += '</div>';
-	$('.modal').html(modal);
+	$('#modal-content').html(modal);
 }
 
 function displayModal(e) {      
@@ -93,5 +92,5 @@ $('.grid-img').click( function(event) {
 	  slides.hide();
 	  $('.modal').show();
 	  slides.eq(index).show();
-    closeModal('.close');  
+    closeModal('.close-btn');  
  });  

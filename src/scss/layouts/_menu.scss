@@ -32,7 +32,6 @@
     border: 2px solid;
     border-radius: .25rem;
     color: $medium-grey;
-    font-weight: 500;
     letter-spacing: normal;
     margin-left: 0.5rem;
     padding: 0.5rem 1.5rem;
@@ -46,7 +45,7 @@
 .logo {
     background: url('../img/logo-tiny.png') no-repeat top left;
     background-size: contain;
-    font: bold 2rem/1 $font-secondary;
+    font: 2rem/1 $font-secondary;
     margin: 0 0 1rem 0;
     color: $dark-grey;
     text-indent: -9999999rem;
