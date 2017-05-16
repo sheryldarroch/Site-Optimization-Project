@@ -1,6 +1,5 @@
 .menu {
     background-color: $light-grey;
-    font-family: $font-secondary;
     padding: 1.5rem 3rem;
     height: auto;
 }
@@ -14,14 +13,12 @@
 }
 .inline-list a {
     color: $dark-grey;
-    font-weight: bold;
     letter-spacing: 0.125rem;
     padding-bottom: 0.5rem;
 }
 
 .inline-list a:hover {
     color: $emerald;
-    text-transform: uppercase;
     transition: all .3s ease-in-out;
 }
 
@@ -45,7 +42,7 @@
 .logo {
     background: url('../img/logo-tiny.png') no-repeat top left;
     background-size: contain;
-    font: 2rem/1 $font-secondary;
+    font: 2rem/1;
     margin: 0 0 1rem 0;
     color: $dark-grey;
     text-indent: -9999999rem;

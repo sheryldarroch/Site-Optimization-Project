@@ -1,0 +1,159 @@
+html, body {
+  height: 100%; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html,
+body {
+  font-size: 100%; }
+
+body {
+  background: #fff;
+  color: #222;
+  cursor: auto;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  position: relative; }
+/* Standard Forms */
+
+/* Using forms within rows, we need to set some defaults */
+
+/* Label Styles */
+
+/* Attach elements to the beginning or end of an input */
+
+/* Adjust padding, alignment and radius if pre/post element is a button */
+
+/* Separate prefix and postfix styles when on span or label so buttons keep their own */
+
+/* We use this to get basic styling on all basic form elements */
+
+/* Respect enforced amount of rows for textarea */
+
+/* Not allow resize out of parent */
+
+::-webkit-input-placeholder {
+  color: #666666; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #666666; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #666666; }
+
+:-ms-input-placeholder {
+  color: #666666; }
+
+/* Add height value for select elements to match text input height */
+
+/* Adjust margin for form elements below */
+
+/* Normalize file input width */
+
+/* HTML5 Number spinners settings */
+/* We add basic fieldset styling */
+
+/* Error Handling */
+
+/* Wrapped around .top-bar to contain to grid width */
+
+/* Accessibility - hides the forward slash */
+
+/* Panels */
+
+/* Image Thumbnails */
+
+/* Pricing Tables */
+/* Orbit Graceful Loading */
+
+/* Pagination centred wrapper */
+/* Typography resets */
+
+/* Default Link Styles */
+
+/* Default paragraph styles */
+
+/* Default header styles */
+
+/* Helpful Typography Defaults */
+
+/* Lists */
+
+/* Unordered Lists */
+
+/* Ordered Lists */
+
+/* Definition Lists */
+
+/* Abbreviations */
+
+/* Blockquotes */
+
+/* Microformats */
+/*
+ * Print styles.
+ *
+ * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+ * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
+*/
+@media print {
+  * {
+    background: transparent !important;
+    color: #000000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  @page {
+    margin: 0.34in; }
+  }
+
+/* Tooltips */
+/* Clearing Styles */
+/* Progress Bar */
+
+/* Foundation Joyride */
+
+/* Default styles for the container */
+
+/* Add a little css triangle pip, older browser just miss out on the fanciness of it */
+
+/* Typography */
+
+/* Styles for screens that are at least 768px; */
+
+/* Foundation Dropdowns */
+
+/* small displays */
+/* medium displays */
+/* large displays */
+/* xlarge displays */
+/* xxlarge displays */
+/* Orientation targeting */
+
+/* Specific visibility for tables */
+
+@media only screen and (orientation: landscape) {
+
+  /* Specific visibility for tables */ }
+@media only screen and (orientation: portrait) {
+
+  /* Specific visibility for tables */ }
+/* Touch-enabled device targeting */
+
+/* Specific visibility for tables */
+
+/* Screen reader-specific classes */
+
+/* Print visibility */
