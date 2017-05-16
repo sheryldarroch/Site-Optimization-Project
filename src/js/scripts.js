@@ -12,7 +12,7 @@ var arr = [
             {
               "id": "photo1-3",							
               "photo": "img/photos/photo3.jpg",
-              "avatar": "img/avatars/avatar4-tiny.jpg"
+              "avatar": "img/avatars/avatar2-tiny.jpg"
             },
             {
               "id": "photo2-1",
@@ -42,7 +42,7 @@ var arr = [
             {
               "id": "photo3-3",
 							"photo": "img/photos/photo9.jpg",
-              "avatar": "img/avatars/avatar4-tiny.jpg"
+              "avatar": "img/avatars/avatar2-tiny.jpg"
             },
 ];
 
