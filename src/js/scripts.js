@@ -84,11 +84,8 @@ $(document).foundation();
 $('.grid-img').click( function(event) {
 	createModal();
 	var imgIndex = $(event.target).attr("data-index");
-	console.log(imgIndex);
 	  var index = parseInt(imgIndex, 10);
-	  console.log(index);
 	  var slides = $('.my-slides');
-	  console.log(slides);
 	  slides.hide();
 	  $('.modal').show();
 	  slides.eq(index).show();

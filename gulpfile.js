@@ -55,7 +55,7 @@ gulp.task('html', ['compileSass'], function() {
 	return gulp.src(options.src + '/index.html')
 		.pipe(useref())
 		.pipe(gulpIf('*.js', uglify()))
-		.pipe(gulpIf('**.*.css', cleanCSS()))
+		.pipe(gulpIf('*.css', cleanCSS()))
 		.pipe(gulp.dest(options.dist));
 });
 
