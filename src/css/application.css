@@ -426,13 +426,12 @@ body {
 .logo {
   background: url("../img/logo-tiny.png") no-repeat top left;
   background-size: contain;
-  font: 2rem/1;
-  margin: 0 0 1rem 0;
+  margin: 0 0 1rem -2rem;
   color: #495560;
-  text-indent: -9999999rem;
   overflow: hidden;
-  width: 40rem;
-  height: 3rem; }
+  text-indent: -99999999rem;
+  height: 3rem;
+  width: 17rem; }
 
 .logo b {
   color: #2fabce; }
@@ -440,6 +439,8 @@ body {
 @media only screen and (min-width: 40.063em) {
   .menu {
     height: 7rem; }
+  .hero {
+    margin-top: 4em; }
   .inline-list {
     float: left;
     margin: 0 0 0 1.5rem; }
@@ -447,7 +448,12 @@ body {
     float: right;
     margin: -.75rem 0 0 0; }
   .logo {
-    float: left; } }
+    float: left;
+    width: 20em; } }
+
+@media only screen and (min-width: 77.125em) {
+  .hero {
+    margin-top: 0; } }
 
 .hero {
   background: url("../img/photos/photo4-tiny.jpg") no-repeat center center;
